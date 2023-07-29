@@ -35,7 +35,7 @@ pipeline {
       steps {
         sh 'phploc app/ --log-csv build/logs/phploc.csv'
    }
-  } */
+  } 
     stage('Plot Code Coverage Report') {
       steps {
 
@@ -52,6 +52,6 @@ pipeline {
             plot csvFileName: 'plot-396c4a6b-b573-41e5-85d8-73613b2ffffb.csv', csvSeries: [[displayTableFlag: false, exclusionValues: 'Interfaces,Traits,Classes,Methods,Functions,Constants', file: 'build/logs/phploc.csv', inclusionFlag: 'INCLUDE_BY_STRING', url: '']], group: 'phploc', numBuilds: '100', style: 'line', title: 'BB - Structure Objects', yaxis: 'Count'
 
       }
-    }
+    }*/
  }
 }
